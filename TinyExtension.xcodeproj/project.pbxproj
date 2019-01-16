@@ -16,6 +16,7 @@
 		3A93F44721EF21890055768B /* TinyExtensionFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A93F44021EF21890055768B /* TinyExtensionFramework.framework */; };
 		3A93F44821EF21890055768B /* TinyExtensionFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A93F44021EF21890055768B /* TinyExtensionFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3AB12C6321F49FCF00DE34ED /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB12C6221F49FCF00DE34ED /* URLExtension.swift */; };
+		3A93F45021EF25780055768B /* EmptyClosuresExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A93F42C21EF1E8E0055768B /* EmptyClosuresExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		3A93F41C21EF1C8D0055768B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A93F41F21EF1C8D0055768B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A93F42121EF1C8D0055768B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A93F42B21EF1E760055768B /* EmptyClosures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = EmptyClosures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A93F42C21EF1E8E0055768B /* EmptyClosuresExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyClosuresExtension.swift; sourceTree = "<group>"; };
 		3A93F44021EF21890055768B /* TinyExtensionFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyExtensionFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A93F44221EF21890055768B /* TinyExtensionFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinyExtensionFramework.h; sourceTree = "<group>"; };
 		3A93F44321EF21890055768B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 				3A93F41521EF1C8C0055768B /* AppDelegate.swift */,
 				3A93F41721EF1C8C0055768B /* ViewController.swift */,
 				3AB12C6421F49FFB00DE34ED /* EnhanceFixedURLInitialization.playground */,
+				3A93F42B21EF1E760055768B /* EmptyClosures.playground */,
 				3A93F41921EF1C8C0055768B /* Main.storyboard */,
 				3A93F41C21EF1C8D0055768B /* Assets.xcassets */,
 				3A93F41E21EF1C8D0055768B /* LaunchScreen.storyboard */,
@@ -113,6 +117,7 @@
 			children = (
 				3A93F44221EF21890055768B /* TinyExtensionFramework.h */,
 				3AB12C6221F49FCF00DE34ED /* URLExtension.swift */,
+				3A93F42C21EF1E8E0055768B /* EmptyClosuresExtension.swift */,
 				3A93F44321EF21890055768B /* Info.plist */,
 			);
 			path = TinyExtensionFramework;
@@ -242,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB12C6321F49FCF00DE34ED /* URLExtension.swift in Sources */,
+				3A93F45021EF25780055768B /* EmptyClosuresExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
