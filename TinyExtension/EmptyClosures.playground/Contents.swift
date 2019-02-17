@@ -1,41 +1,39 @@
 import UIKit
 import TinyExtensionFramework
 
-func sampleRequest(text: String, success: (Bool, String) -> (), failure: () -> ()) {
-    if text.hasPrefix("failure") {
-        failure()
-    } else if text.hasPrefix("success") {
-        success(true, text)
-    } else {
-        success(false, text)
+func sampleRequest(success: (Bool, String) -> (), failure: () -> ()) {
+    // some network request logic
+    // with some local variable store logic
+}
+
+do {
+    class A {
+        var didTapButtonA: () -> () = {}
+        var didTapButtonB: (Int, URL?) -> () = { _, _ in }
+        var didTapButtonC: (Int, Int, Int, Int, URL?) -> () = { _, _, _, _, _ in }
+    }
+    let a = A()
+    a.didTapButtonA = {
+        // some logic code
     }
 }
 
 do {
-    var a: () -> () = {}
-    var b: (Int, URL?) -> () = { _, _ in }
-    var c: (Int, Int, Int, Int, URL?) -> () = { _, _, _, _, _ in }
+    class A {
+        var didTapButtonA: () -> () = Closure.empty()
+        var didTapButtonB: (Int, URL?) -> () = Closure.empty()
+        var didTapButtonC: (Int, Int, Int, Int, URL?) -> () = Closure.empty()
+    }
 }
 
-do {
-    var a: () -> () = Closure.empty()
-    var b: (Int, URL?) -> () = Closure.empty()
-    var c: (Int, Int, Int, Int, URL?) -> () = Closure.empty()
-}
-
-sampleRequest(text: "success", success: { (isSuccess, text) in
-    print("success: \(isSuccess) text: \(text)")
+sampleRequest(success: { (isSuccess, text) in
+    // do some complex thing
 }, failure: {})
 
-sampleRequest(text: "failure", success: { _, _ in }) {
-    print("failed")
-}
+sampleRequest(success: { _, _ in }, failure: {})
 
-sampleRequest(text: "success", success: { (isSuccess, text) in
-    print("success: \(isSuccess) text: \(text)")
+sampleRequest(success: { (isSuccess, text) in
+    // do some complex thing
 }, failure: Closure.ignore)
 
-sampleRequest(text: "failure", success: Closure.ignore) {
-    print("failed")
-}
-
+sampleRequest(success: Closure.ignore, failure: Closure.ignore)
